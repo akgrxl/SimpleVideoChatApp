@@ -1,0 +1,5 @@
+cdk.out/
+.env.local
+*.log
+.DS_Store
+node_modules
