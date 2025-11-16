@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Chat App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        #videoContainer {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #remoteVideo {
+            width: 100%;
+            display: block;
+        }
+        #localVideo {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 20%;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Simple Video Chat</h1>
-    <button id="startBtn" disabled>Start Call</button>
-    <div>
-        <video id="localVideo" autoplay muted></video>
+    <!-- <h1>Simple Video Chat <button id="startBtn" disabled>Join Call</button></h1>     -->
+    <div id="videoContainer">
         <video id="remoteVideo" autoplay></video>
+        <video id="localVideo" autoplay muted></video>
     </div>
     <script src="app.js"></script>
 </body>

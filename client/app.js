@@ -11,7 +11,7 @@ const config = {
     iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
 };
 
-startBtn.addEventListener('click', startCall);
+// startBtn.addEventListener('click', startCall);
 
 // Auto-join on page load
 window.addEventListener('load', joinRoom);
@@ -33,6 +33,10 @@ async function joinRoom() {
     // Get local stream
     localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     localVideo.srcObject = localStream;
+
+    setTimeout(() => {
+        startCall();
+    }, 100);
 }
 
 async function startCall() {
